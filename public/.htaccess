@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond $1 !^(index\.php|img|js|css|audio|robots\.txt|favicon\.ico)
+RewriteRule ^(.*)$ /index.php/$1 [L]
+#RewriteRule ^(.*)$ /library_search/public/index.php/$1 [L]
