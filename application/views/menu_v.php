@@ -11,10 +11,10 @@
         <ul class="nav">
           <li class="<?php echo $menu_active == 'search' ? 'active':'';?>"><a href="<?php echo base_url('search');?>">書籍検索</a></li>
         </ul>
-        <form class="navbar-form pull-right" action="<?php echo base_url('login');?>">
+        <?php echo form_open(base_url('login'), array('class' => 'navbar-form pull-right')); ?>
           <span style="color:white;">ログイン中：<?php echo $login_id; ?>さん</span>
           <button type="submit" class="btn">Logout</button>
-        </form>
+        <?php echo form_close(); ?>
       </div><!--/.nav-collapse -->
     </div>
   </div>

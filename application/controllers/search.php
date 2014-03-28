@@ -16,6 +16,7 @@ class Search extends MY_Controller
         $this->load->model('Book_model');
         $this->load->model('Category_model');
         $this->load->helper('download');
+        $this->load->helper('form');
         $this->load->library('form_validation');
         $this->load->library('pagination');
         $this->_page_data['menu_active'] = 'search';

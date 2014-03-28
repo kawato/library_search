@@ -65,12 +65,12 @@
   <body>
     <div class="container">
       <div style="text-align: center;" class="error-message"><?php echo validation_errors(); ?></div>
-      <form class="form-signin" action="<?php echo base_url('login'); ?>" method="post" >
+      <?php echo form_open(base_url('login'), array('class' => 'form-signin')); ?>
         <h2 class="form-signin-heading">Please sign in</h2>
         <input type="text" class="input-block-level" placeholder="UserID" name="userid" value="<?php echo $userid;?>">
         <input type="password" class="input-block-level" placeholder="Password" name="password" value="<?php echo $password;?>">
         <button id="signin" name="singin" class="btn btn-large btn-primary" type="submit">Sign in</button>
-      </form>
+      <?php echo form_close(); ?>
 
     </div> <!-- /container -->
 

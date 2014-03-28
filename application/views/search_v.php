@@ -91,7 +91,7 @@
     <div class="container">
       <div class="form-signin">
         <h4 class="form-signin-heading">検索条件</h4>
-        <form id="frm_search" action="<?php echo base_url('search');?>" method="post">
+        <?php echo form_open(base_url('search'), array('id' => 'frm_search')); ?>
           <div style="text-align: center;" class="error-message"><?php echo validation_errors(); ?></div>
           <table class="table" style="border: 0px;">
             <thead>
@@ -167,7 +167,7 @@
             </tbody>
           </table>
           <div style="text-align: center;"><button id="btn_search"  type="submit" class="btn btn-primary"><i class="icon-search icon-white" style="margin-top: 1px;"></i>&nbsp;Search</button></div>
-        </form>
+        <?php echo form_close(); ?>
 
       </div>
       <?php if ($is_searched): ?>
@@ -208,7 +208,7 @@
         </table>
         </div>
         <?php echo $page_link; ?>
-        <form method="post" id="frm_csv" action="<?php echo base_url('search/csv');?>" style="margin-top: 10px;">
+        <?php echo form_open(base_url('search/csv'), array('id' => 'frm_csv','style' => 'margin-top: 10px;')); ?>
           <input type="hidden" name="category_id" value="<?php echo $category_id; ?>" />
           <input type="hidden" name="publisher_name" value="<?php echo $publisher_name; ?>" />
           <input type="hidden" name="book_name" value="<?php echo $book_name; ?>" />
@@ -222,7 +222,7 @@
 
 
           <div style="text-align: center;"><button id="btn_search"  type="submit" class="btn btn-primary"><i class="icon-download icon-white" style="margin-top: 1px;"></i>&nbsp;CSV</button></div>
-        </form>
+        <?php echo form_close(); ?>
       </div>
       <?php else: ?>
         <div class="form-signin" style="margin-top: 10px;">
